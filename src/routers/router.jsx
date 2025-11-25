@@ -21,11 +21,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <ErrorPage/>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
-        element: <Home />
+        element: <Home />,
       },
       {
         path: "/shop",
@@ -34,42 +34,51 @@ const router = createBrowserRouter([
       {
         path: "/book/:id",
         element: <SignleBook />,
-        loader: ({ params }) => fetch(buildApiUrl(`/book/${params.id}`))
+        loader: ({ params }) => fetch(buildApiUrl(`/book/${params.id}`)),
       },
       {
         path: "/about",
-        element: <About/>
+        element: <About />,
       },
       {
         path: "/blog",
-        element: <Blog/>
-      }
-    ]
+        element: <Blog />,
+      },
+    ],
   },
   {
     path: "/admin/dashboard",
     element: <DashboardLayout />,
     children: [
-      { path: "/admin/dashboard", element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>},
+      {
+        path: "/admin/dashboard",
+        element: (
+          <PrivateRoute>
+            <Dashboard></Dashboard>
+          </PrivateRoute>
+        ),
+      },
       { path: "/admin/dashboard/upload", element: <UploadBook /> },
       { path: "/admin/dashboard/manage", element: <ManageBooks /> },
-      { path: "/admin/dashboard/edit-books/:id", element: <EditBooks />,
-      loader: ({ params }) => fetch(buildApiUrl(`/book/${params.id}`))
-    },
+      {
+        path: "/admin/dashboard/edit-books/:id",
+        element: <EditBooks />,
+        loader: ({ params }) => fetch(buildApiUrl(`/book/${params.id}`)),
+      },
     ],
   },
   {
     path: "login",
-    element: <Login />
+    element: <Login />,
   },
   {
     path: "/create-user",
-    element: <Signup/>
+    element: <Signup />,
   },
   {
-    path:"/logout",
-    element: <Logout/>
-  }
+    path: "/logout",
+    element: <Logout />,
+  },
 ]);
 
 export default router;
