@@ -1,34 +1,44 @@
-import React from 'react'
-// react icons
-import { FaStar } from 'react-icons/fa6'
+import PropTypes from 'prop-types';
+import { FaStar } from 'react-icons/fa6';
 import { Avatar } from 'flowbite-react';
-import profile from "../../assets/profile.jpg"
+import profile from "../../assets/profile.jpg";
 
-const ReviewCard = () => {
+const ReviewCard = ({ review }) => {
+    const { book, quote, reviewer, title, rating = 5, avatar = profile } = review;
+
     return (
         <div className='space-y-6'>
             <div className='text-amber-500 flex gap-2'>
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
+                {Array.from({ length: rating }).map((_, idx) => (
+                    <FaStar key={idx} />
+                ))}
             </div>
 
-            {/* texts */}
             <div className='mt-7'>
-                <p className='mb-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel voluptatibus libero eaque illo voluptate ducimus commodi, eos, quam repellendus, officiis esse cum alias nemo blanditiis dolore quas officia molestiae accusantium!</p>
+                <p className='mb-3 text-sm font-semibold uppercase text-blue-700 tracking-wide'>{book}</p>
+                <p className='mb-5 text-gray-700'>{quote}</p>
                 <Avatar
-                    alt="avatar of Jese"
-                    img={profile}
+                    alt={`Avatar of ${reviewer}`}
+                    img={avatar}
                     rounded
                     className='w-10 mb-4'
                 />
-                <h5 className='text-lg font-medium'>Mark Ping</h5>
-                <p className='text-sm'> CEO, ABC Company</p>
+                <h5 className='text-lg font-medium'>{reviewer}</h5>
+                <p className='text-sm text-gray-500'>{title}</p>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default ReviewCard
+ReviewCard.propTypes = {
+    review: PropTypes.shape({
+        book: PropTypes.string.isRequired,
+        quote: PropTypes.string.isRequired,
+        reviewer: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        rating: PropTypes.number,
+        avatar: PropTypes.string,
+    }).isRequired,
+};
+
+export default ReviewCard;

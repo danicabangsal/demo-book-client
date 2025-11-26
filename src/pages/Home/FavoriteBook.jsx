@@ -3,6 +3,10 @@ import favBook from '../../assets/favoritebook.jpg'
 import { Link } from 'react-router-dom'
 
 const FavoriteBook = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className='px-4 lg:px-24 my-20 flex flex-col md:flex-row justify-between items-center gap-12'>
         <div className='md:w-1/2'>
@@ -25,7 +29,9 @@ const FavoriteBook = () => {
                 <p className='text-base'>Pdfs Downloaded</p>
               </div>
             </div>
-            <Link to="/shop" className='block mt-8'><button className='bg-blue-700 text-white font-semibold px-5 py-2 rounded hover:bg-black transition-all duration-300 '>Explore Now</button></Link>
+            <Link to="/shop" onClick={scrollToTop} className='block mt-8'>
+              <button className='bg-blue-700 text-white font-semibold px-5 py-2 rounded hover:bg-black transition-all duration-300 '>Explore Now</button>
+            </Link>
         </div>
     </div>
   )

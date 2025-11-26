@@ -37,10 +37,12 @@ const About = () => {
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
               <p className="text-base font-semibold leading-7 text-blue-600">Library Management System</p>
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Created for Principles of IS</h1>
+              <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Project Scope and Limitations</h1>
               <p className="mt-6 text-xl leading-8 text-gray-700">
-                Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam
-                eget aliquam. Quisque id at vitae feugiat egestas.
+                Our platform features a secure admin login that lets authorized staff easily upload new books and manage existing ones. 
+                With simple book uploading tools and real-time inventory tracking, keeping your collection organized has never been easier. 
+                Users can browse books by genre, explore different sections, and quickly discover titles that interest them. 
+                Admins also have full control to edit or remove books from the inventory whenever needed, ensuring the catalog stays accurate and up to date.
               </p>
             </div>
           </div>
@@ -56,46 +58,39 @@ const About = () => {
           <div className="lg:pr-4">
             <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
               <p>
-                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet
-                vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque
-                erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris
-                semper sed amet vitae sed turpis id.
+                LBMS only accepts books that live in the public domain or are publicly available. 
+                Upholding this policy keeps the platform legally accessible for every reader while setting clear expectations for contributors. 
+                As the project grows we plan to expand supported formats, enrich search, and add collaboration tools, but safeguarding compliance will always be the baseline.
               </p>
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
                 <li className="flex gap-x-3">
                   <BsCloudArrowUp className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                   <span>
-                    <strong className="font-semibold text-gray-900">Push to deploy.</strong> Lorem ipsum, dolor sit amet
-                    consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
-                    blanditiis ratione.
+                    <strong className="font-semibold text-gray-900">Streamlined uploads.</strong> Admins can securely add, edit, or remove PDF titles with intuitive forms that keep the catalog up to date.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
                   <HiLockClosed className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                   <span>
-                    <strong className="font-semibold text-gray-900">SSL certificates.</strong> Anim aute id magna aliqua
-                    ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
+                    <strong className="font-semibold text-gray-900">Respect for copyright.</strong> Public-domain and publicly released works keep the system compliant and transparent for contributors.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
                   <HiServer className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                   <span>
-                    <strong className="font-semibold text-gray-900">Database backups.</strong> Ac tincidunt sapien
-                    vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+                    <strong className="font-semibold text-gray-900">A growing catalog.</strong> Thousands of public-domain PDFs give readers a deep well of classics and curated finds to explore at their own pace.
                   </span>
                 </li>
               </ul>
               <p className="mt-8">
-                Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor
-                fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac
-                adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
+                Readers can browse by genre, explore curated sections, and discover content that matches their interests without navigating a cluttered UI. 
+                The goal is to keep the interface approachable for everyone while still giving avid readers tools to dive deeper.
               </p>
-              <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">No server? No problem.</h2>
+              <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">Built For Growth</h2>
               <p className="mt-6">
-                Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh.
-                Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed
-                tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam
-                turpis ipsum eu a sed convallis diam.
+                LBMS is as an academic project that will continue to evolve. 
+                Future iterations aim to widen file-format support, sharpen search capabilities, and introduce collaborative features for readers and admins alike. 
+                Have an idea that could improve LBMS? Let us know—community input guides what we tackle next.
               </p>
             </div>
           </div>
